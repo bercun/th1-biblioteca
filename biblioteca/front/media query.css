@@ -1,0 +1,166 @@
+/* Switch the About carousel from three images to one image. */
+@media only screen and (max-width: 1399px) {
+    #image2,
+    #image3,
+    #image4,
+    #image5 {
+        display: none;
+    }
+
+    .carousel-indicators {
+        width: 140px;
+    }
+
+    #slide4,
+    #slide5 {
+        display: block;
+    }
+}
+
+/* Tablet: burger menu replaces desktop navigation. */
+@media only screen and (max-width: 1024px) {
+    header {
+        background-position: center center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav {
+        padding-top: 0;
+    }
+
+    #user-menu.open #user-inactive,
+    #dropmenu.open #user-active {
+        display: flex;
+        top: 70px;
+        right: 80px;
+        visibility: visible;
+        transition: right 0.5s, visibility 0.5s;
+    }
+
+    .menu-burger-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 45px;
+        height: 22px;
+        margin-top: 33px;
+        margin-right: 20px;
+        margin-left: 20px;
+        cursor: pointer;
+        background-color: #000000;
+    }
+
+    .burger-lines {
+        width: 45px;
+        height: 0;
+        border: 1px solid #FFFFFF;
+        transition: transform 0.5s;
+        will-change: transform;
+    }
+
+    .header-links.open .burger-lines:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .header-links.open .burger-lines:nth-child(2) {
+        opacity: 0;
+    }
+
+    .header-links.open .burger-lines:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    #open-menu-burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: min(332px, 100vw);
+        height: 370px;
+        padding-top: 10px;
+        padding-bottom: 100px;
+        visibility: hidden;
+        z-index: 1;
+        background-color: #000000;
+        transform: translateX(100%);
+        transition: transform 0.5s, visibility 0.5s;
+    }
+
+    .header-links.open #open-menu-burger {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    #carousel-img .img {
+        flex-basis: min(450px, calc(100vw - 120px));
+        width: min(450px, calc(100vw - 120px));
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    #contacts {
+        max-width: 600px;
+        text-align: center;
+    }
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Narrow mobile*/
+@media only screen and (max-width: 414px) {
+    main > section {
+        padding-inline: 16px;
+    }
+
+    #carousel-img .img {
+        flex-basis: min(150px, calc(100vw - 72px));
+        width: min(150px, calc(100vw - 72px));
+    }
+
+    .prev,
+    .next {
+        width: 36px;
+        height: 36px;
+        padding: 8px;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    fieldset label {
+        flex-basis: 44%;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    #search-input {
+        width: 100%;
+    }
+
+    #search-button {
+        align-self: center;
+        justify-self: center;
+    }
+}

@@ -1,0 +1,217 @@
+.admin-body {
+    min-height: 100vh;
+    background: #f5f5f5;
+    font-family: Inter, sans-serif;
+}
+
+.admin-header {
+    background: #0C0C0E;
+    color: #fff;
+}
+
+.admin-header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 20px;
+}
+
+.admin-header h1 {
+    width: auto;
+    height: auto;
+    margin: 0;
+    color: #fff;
+    font-family: Forum, serif;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.admin-header-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-link,
+#admin-logout {
+    color: #fff;
+    background: transparent;
+    border: 1px solid #BB945F;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.admin-link:hover,
+#admin-logout:hover {
+    background: #BB945F;
+}
+
+.admin-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+}
+
+.admin-message {
+    margin: 40px 0;
+    font-size: 18px;
+}
+
+.admin-app.hidden,
+.admin-panel.hidden,
+.hidden {
+    display: none !important;
+}
+
+.admin-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.admin-tab {
+    border: 1px solid #0C0C0E;
+    background: #fff;
+    padding: 10px 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.admin-tab.active,
+.admin-tab:hover {
+    background: #BB945F;
+    border-color: #BB945F;
+}
+
+.admin-panel h2,
+.admin-purchases h3 {
+    font-family: Forum, serif;
+    font-size: 28px;
+    margin: 0 0 16px;
+    text-align: left;
+}
+
+.admin-form {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.admin-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.admin-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.admin-form-wide {
+    grid-column: 1 / -1;
+}
+
+.admin-image-path {
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    word-break: break-all;
+}
+
+.admin-image-preview {
+    display: block;
+    width: 150px;
+    height: auto;
+    border: 1px solid #ddd;
+    background-color: black;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+    border: 1px solid #BB945F;
+    padding: 8px;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.admin-form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.admin-form-actions button,
+.admin-table button {
+    border: 1px solid #0C0C0E;
+    background: #fff;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.admin-form-actions button:hover,
+.admin-table button:hover {
+    background: #BB945F;
+    border-color: #BB945F;
+}
+
+.admin-table-wrap {
+    overflow-x: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.admin-table th,
+.admin-table td {
+    border-bottom: 1px solid #eee;
+    padding: 10px 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.admin-table th {
+    background: #0C0C0E;
+    color: #fff;
+    font-weight: 700;
+}
+
+.admin-table .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.admin-purchases {
+    margin-top: 28px;
+}
+
+@media (max-width: 700px) {
+    .admin-header h1 {
+        font-size: 22px;
+    }
+
+    .admin-table {
+        font-size: 12px;
+    }
+}
