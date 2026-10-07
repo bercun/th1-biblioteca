@@ -37,7 +37,7 @@ function diagnostico(): array
         'docroot' => $_SERVER['DOCUMENT_ROOT'] ?? '?',
         'port' => $port,
         'mode' => null,
-        
+
         'candidatos' => [],
         'helper_ps1' => is_file(__DIR__ . DIRECTORY_SEPARATOR . 'rfid_read.ps1') ? 'presente' : 'AUSENTE',
         'powershell' => null,
